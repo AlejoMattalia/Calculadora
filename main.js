@@ -54,6 +54,7 @@ const resultadoTotal = () => {
     resultadoFinal = eval(operacion.innerHTML);
     resultado.innerHTML = resultadoFinal;
 
+
     if ((resultado.innerHTML.trim().length > 7) && (resultado.innerHTML.trim().length < 12)) {
         resultado.style.fontSize = "50px";
         resultado.style.bottom = "35px";
@@ -65,12 +66,9 @@ const resultadoTotal = () => {
     else if (resultado.innerHTML.trim().length > 14) {
         let primerosDoceNumeros = resultado.innerHTML.substring(0, 12);
         let numeroContador = resultado.innerHTML.trim().length - 15;
-        console.log(numeroContador)
         resultado.innerHTML = primerosDoceNumeros + "e+" + numeroContador;
         resultado.style.bottom = "30px";
-    }
-    else{
-        
+        resultado.style.fontSize = "35px";
     }
 
     
